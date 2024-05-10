@@ -1,5 +1,5 @@
 {
-  "name": "graphcms-boilerplate",
+  "name": "pgm-platform",
   "version": "1.0.0",
   "description": "GraphCMS Boilerplate",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/pgmgent-pgm-4/graphcms-boilerplate.git"
   },
-  "author": "",
+  "author": "Mees Akveld",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pgmgent-pgm-4/graphcms-boilerplate/issues"

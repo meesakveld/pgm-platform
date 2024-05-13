@@ -1,0 +1,48 @@
+/* 
+    ————— IMPORTS —————
+*/
+@import url(./reset.css);
+@import url(./fonts.css);
+
+
+/* ———————————————————————————————————————— */
+/* ROOT */
+:root {
+
+    /* FONTS */
+    --font-manuka: "Manuka";
+    --font-FiraCode: "Fira Code";
+    --font-ShareTechMono: "Share Tech Mono";
+
+    /* COLORS */
+    --color-background: #efefef;
+    --color-black: #243542;
+    --color-blue: #0FC7FF;
+    --color-red: #FF1F4F;
+    --color-pink: #FF059F;
+}
+
+[dark-mode] {
+    --color-background: #1A1A1A;   
+    --color-black: #ffffff;
+}
+
+
+/* ———————————————————————————————————————— */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manuka);
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+body {
+    font-family: var(--font-FiraCode);
+    background-color: var(--color-background);
+    color: var(--color-black);
+}

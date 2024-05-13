@@ -35,4 +35,8 @@ export const ROUTES = {
         path: '/team',
         title: 'Team',
     },
+    search: {
+        path: '/search',
+        title: 'Search'
+    }
 }

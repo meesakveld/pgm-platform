@@ -12,7 +12,6 @@ export default function Header() {
 
 
     // —————————— Dark Mode ——————————
-    // Check if dark mode is enabled in session storage
     useEffect(() => {
         setIsDarkMode(sessionStorage.getItem("isDarkMode") === 'true' ? true : false)
     }, [])

@@ -5,7 +5,7 @@ import Root from "./layouts/Root";
 import { ROUTES } from './routes/routes'
 import { ThemeArea } from "./context/ThemeContext";
 
-import './styles/main.css'
+import './styles/output.css'
 
 
 const routes = createBrowserRouter(createRoutesFromElements(

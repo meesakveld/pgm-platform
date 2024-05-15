@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "tailwind": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch",
+    "tailwind": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css",
+    "tailwind:watch": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

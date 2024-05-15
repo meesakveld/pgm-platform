@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-	content: ['./src/**/*.{js,jsx}'],
+	content: [
+		'./src/**/*.{js,jsx}',
+		'./srs/components/*.{js,jsx}',
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -10,7 +13,13 @@ export default {
 				blue: 'rgb(var(--color-blue))',
 				red: 'rgb(var(--color-red))',
 				pink: 'rgb(var(--color-pink))',
-			}
+			},
+			spacing: {
+				'200': '70rem'
+			},
+			width: {
+				'18': '4.5rem',
+			},
 		},
 		fontFamily: {
 			manuka: ['Manuka'],

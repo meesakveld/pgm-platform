@@ -1,9 +1,12 @@
 import React from 'react'
+import TopSection from '../components/TopSection'
 
 export default function Search() {
     return (
-        <div>
-            Search
-        </div>
+        <main>
+        
+            <TopSection title="Search" />
+
+        </main>
     )
 }

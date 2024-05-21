@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
         <footer className="max-w-200 mx-auto mt-24">
             
-            <h2 className="font-manuka text-7xl sm:text-9xl uppercase text-center" >Geïnteresseerd?</h2>
+            <h2 className="font-manuka text-7xl sm:text-9xl uppercase text-center p-6" >Geïnteresseerd?</h2>
 
             <hr className="my-12 border-t-black" />
             
-            <div className="flex gap-8">
+            <div className="flex flex-col md:flex-row gap-8 p-6">
             
                 <section className="basis-4/12">
 
@@ -16,7 +17,7 @@ export default function Footer() {
 
                     <p>Schrijf je dan nu in of kom eens langs op 1 van onze infodagen. We helpen je graag verder!</p>
 
-                    <a className="bg-black bg-opacity-30" href="https://www.arteveldehogeschool.be/nl/bij-ons-studeren/kennismaken/infomomenten#infodagen">Inschrijven</a>
+                    <Link className="bg-gray-200 p-4 inline-block mt-6" to="https://www.arteveldehogeschool.be/nl/bij-ons-studeren/kennismaken/infomomenten#infodagen" target="_blank" rel="noopener noreferrer">Inschrijven</Link>
 
                 </section>
 
@@ -38,7 +39,7 @@ export default function Footer() {
                     
                     <p><a href="tel:092347200">09 234 72 00</a></p>
                     
-                    <p><a href="mailto:philippe.depauw@arteveldehs.be">philippe.depauw@arteveldehs.be</a></p>
+                    <p><a href="mailto:philippe.depauw@arteveldehs.be?subject=Graduaat Programmern">philippe.depauw@arteveldehs.be</a></p>
                 
                 </section>
             

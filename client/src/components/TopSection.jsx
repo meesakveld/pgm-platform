@@ -6,7 +6,7 @@ import star from '../assets/decoration/star.svg'
 
 export default function TopSection({ title, description = "" }) {
     return (
-        <section>
+        <section className="mb-12">
 
             <img className="ml-auto h-40 transform -scale-y-100" src={deco2} alt="decoration" />
 

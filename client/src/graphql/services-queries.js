@@ -1,17 +1,13 @@
 import { gql } from '@apollo/client';
 
-/**
- * Retrieves all portfolio projects and related information.
- *
- * @returns {object} The result of the GraphQL query.
- */
 export const GET_ALL_SERVICES = gql`
     query getServices {
         services {
             title
             slug
+            id
         }
-        pages(where: { slug: "service" }) {
+        pages(where: { slug: "services" }) {
             title
             description
         }
@@ -27,7 +23,7 @@ export const GET_SERVICE_BY_SLUG = gql`
                 html
             }
         }
-        pages(where: { slug: "service" }) {
+        pages(where: { slug: "services" }) {
             title
             description
         }

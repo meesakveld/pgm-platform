@@ -1,10 +1,5 @@
 import { gql } from '@apollo/client';
 
-/**
- * Retrieves all portfolio projects and related information.
- *
- * @returns {object} The result of the GraphQL query.
- */
 export const GET_ALL_PORTFOLIO_PROJECTS = gql`
     query getPortfolioProjects {
         portfolioPages {
@@ -31,12 +26,6 @@ export const GET_ALL_PORTFOLIO_PROJECTS = gql`
     }
 `
 
-/**
- * Retrieves all portfolio projects by course.
- *
- * @param {string} courseSlug - The slug of the course.
- * @returns {Object} - An object containing portfolio pages and general pages.
- */
 export const GET_ALL_PORTFOLIO_PROJECTS_BY_COURSE = gql`
     query getPortfolioProjectsByCourse($courseSlug: String = "") {
         portfolioPages(where: { course: { slug: $courseSlug } }) {

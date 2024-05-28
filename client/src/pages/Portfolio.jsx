@@ -4,15 +4,10 @@ import { Link } from 'react-router-dom'
 import TopSection from '../components/TopSection'
 import FilterSort from '../components/FilterSort'
 
-import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
-
 import { useQuery } from '@apollo/client'
 import { GET_ALL_PORTFOLIO_PROJECTS, GET_ALL_PORTFOLIO_PROJECTS_BY_COURSE } from '../graphql/portfolio-queries'
 
 export default function Portfolio() {
-
-    loadDevMessages()
-    loadErrorMessages()
 
     const [filter, setFilter] = useState("all")
     const [sort, setSort] = useState("newest")

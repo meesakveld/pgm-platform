@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom'
 import TopSection from '../components/TopSection'
 
 import { useQuery } from '@apollo/client'
-import { GET_ALL_BLOG_POSTS, GET_BLOG_POST_BY_SLUG } from '../graphql/blog-queries'
+import { GET_ALL_BLOG_POSTS } from '../graphql/blog-queries'
 
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 
 export default function Blog() {
-    
-    loadDevMessages(); loadErrorMessages();
 
     const [posts, setPosts] = useState([])
     const [page, setPage] = useState({})

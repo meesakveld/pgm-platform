@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import TopSection from '../components/TopSection'
+import GridLayout from '../components/GridLayout'
 
 import { useQuery } from '@apollo/client'
-import { GET_ALL_SERVICES } from '../graphql/service-queries'
-
-import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+import { GET_ALL_SERVICES } from '../graphql/services-queries'
 
 export default function Services() {
-
-    loadDevMessages(); loadErrorMessages();
 
     const [services, setServices] = useState([])
     const [page, setPage] = useState({})
@@ -36,20 +32,7 @@ export default function Services() {
             {loading && <p className='p-6'>Loading...</p>}
             {error && <p className='p-6'>Error: {error.message}</p>}
 
-            <div className="p-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                {services.map((service) => (
-
-                    <article key={service.slug} className={`p-6 border-2 font-shareTechMono text-2xl sm:text-3xl w-full ${bordercolor()}`}>
-
-                        <Link to={`/services/${service.slug}`} className="flex h-80 flex-wrap content-end">
-                            <h2>{service.title}</h2>
-                        </Link>
-
-                    </article>
-                ))}
-
-            </div>
+            <GridLayout data={services} itemToDisplay='title' />
 
         </main>
 

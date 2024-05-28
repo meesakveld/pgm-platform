@@ -17,7 +17,7 @@ export default function Footer() {
 
                     <p>Schrijf je dan nu in of kom eens langs op 1 van onze infodagen. We helpen je graag verder!</p>
 
-                    <Link className="bg-gray-200 p-4 inline-block mt-6" to="https://www.arteveldehogeschool.be/nl/bij-ons-studeren/kennismaken/infomomenten#infodagen" target="_blank" rel="noopener noreferrer">Inschrijven</Link>
+                    <Link className="bg-gray-200 p-4 inline-block mt-6 text-[#243542]" to="https://www.arteveldehogeschool.be/nl/bij-ons-studeren/kennismaken/infomomenten#infodagen" target="_blank" rel="noopener noreferrer">Inschrijven</Link>
 
                 </section>
 

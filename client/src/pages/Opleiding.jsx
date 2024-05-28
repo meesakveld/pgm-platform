@@ -38,8 +38,8 @@ export default function Opleiding() {
                     <h2 className="font-manuka text-6xl sm:text-8xl uppercase mb-8 sm:mb-16">Hoe ziet de opleiding er uit?</h2>
                 
                     <div className="grid gap-8 sm:gap-12 sm:grid-cols-2">
-                        {programmaLines.map((line) => (
-                            <div key={line.id}>
+                        {programmaLines.map((line, index) => (
+                            <div key={line.id} className={index === programmaLines.length - 1 ? (index + 1)/2 !== 0 ? 'col-span-2' : '' : ''}>
                                 <h3 className="font-manuka text-4xl sm:text-6xl uppercase mb-2 sm:mb-4">{line.title}</h3>
                                 <p>{line.description}</p>
                             </div>

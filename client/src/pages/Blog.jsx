@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import TopSection from '../components/TopSection'
+import ListLayout from '../components/ListLayout'
 
 import { useQuery } from '@apollo/client'
 import { GET_ALL_BLOG_POSTS } from '../graphql/blog-queries'
-
-import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
-import ListLayout from '../components/ListLayout'
 
 export default function Blog() {
 

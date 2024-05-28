@@ -7,6 +7,7 @@ import { useQuery } from '@apollo/client'
 import { GET_ALL_BLOG_POSTS } from '../graphql/blog-queries'
 
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+import ListLayout from '../components/ListLayout'
 
 export default function Blog() {
 
@@ -17,7 +18,13 @@ export default function Blog() {
 
     useEffect(() => {
         if (!data) return
-        setPosts(data.blogPosts)
+        const formattedPosts = data.blogPosts.map(post => {
+            return {
+                ...post,
+                publishedAt: formatDate(post.publishedAt)
+            };
+        });
+        setPosts(formattedPosts)
         setPage(data.pages[0])
     }, [data])
 
@@ -36,16 +43,7 @@ export default function Blog() {
             { loading && <p className='p-6'>Loading...</p> }
             { error && <p className='p-6'>Error: {error.message}</p> }
 
-            <div className="p-6">
-                { posts.map((post, index) => (
-                    <article key={post.slug} className={`border-t-2 px-6 border-black ${index === posts.length - 1 ? 'border-b-2' : ''}`}>
-                        <Link to={`/blog/${post.slug}`} className="flex flex-col sm:flex-row justify-between my-8 gap-2 sm:gap-8 sm:items-center">
-                            <h2 className="sm:basis-4/6">{post.title}</h2>
-                            <p className="shrink-0">{formatDate(post.publishedAt)}</p>
-                        </Link>
-                    </article>
-                )) }
-            </div>
+            <ListLayout data={posts} left='title' right='publishedAt' isLink={true} />
 
         </main>
 

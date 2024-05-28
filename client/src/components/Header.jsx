@@ -126,7 +126,7 @@ export default function Header() {
                             </Link>
                         </form>
 
-                        <button className="w-14 h-14 bg-white rounded-full flex justify-center items-center" onClick={handleThemeClick}><img className='w-6' src={isDarkMode ? sun : moon} /></button>
+                        <button className="w-14 h-14 bg-white rounded-full flex justify-center items-center" onClick={handleThemeClick}><img alt={isDarkMode ? 'sun' : 'moon'} className='w-6' src={isDarkMode ? sun : moon} /></button>
                     </div>
 
                     <button className="bg-white w-18 h-18 flex justify-center items-center rounded-full" onClick={handleMenuClick}><img src={isMenuOpen ? close : menu} alt="Menu" className="w-8" /></button>

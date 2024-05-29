@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_ALL_DATA_FOR_HOME_PAGE = gql`
 query getHomePageData {
-    portfolioItems: portfolioPages(first: 5) {
+    portfolioItems: portfolioPages(first: 10) {
       slug
       id
       banner {

@@ -25,7 +25,6 @@ export default function Blog() {
         setPage(data.pages[0])
     }, [data])
 
-    // dateformating -> 1 mei 2012
     const formatDate = (date) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('nl-NL', options)

@@ -17,16 +17,12 @@ export const GET_ALL_BLOG_POSTS = gql`
 
 export const GET_BLOG_POST_BY_SLUG = gql`
     query getBlogPostBySlug($slug: String = "") {
-        blogPosts(where: { slug: $slug }) {
+        article: blogPosts(where: { slug: $slug }) {
             title
             slug
             content {
                 html
             }
-        }
-        pages(where: { slug: "blog" }) {
-            title
-            description
         }
     }
 `

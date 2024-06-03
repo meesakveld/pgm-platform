@@ -56,7 +56,7 @@ export const GET_ALL_PORTFOLIO_PROJECTS_BY_COURSE = gql`
  */
 export const GET_PORTFOLIO_PROJECT_BY_SLUG = gql`
     query getPortfolioProjectsBySlug($slug: String = "") {
-        portfolioPages(where: { slug: $slug }) {
+        article: portfolioPages(where: { slug: $slug }) {
             title
             slug
             description
@@ -66,10 +66,6 @@ export const GET_PORTFOLIO_PROJECT_BY_SLUG = gql`
             content {
                 html
             }
-        }
-        pages(where: { slug: "portfolio" }) {
-            title
-            slug
         }
     }
 `

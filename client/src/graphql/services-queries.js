@@ -15,17 +15,13 @@ export const GET_ALL_SERVICES = gql`
 `
 
 export const GET_SERVICE_BY_SLUG = gql`
-    query getBlogPostBySlug($slug: String = "") {
-        blogPosts(where: { slug: $slug }) {
+    query getServiceBySlug($slug: String = "") {
+        article: services(where: { slug: $slug }) {
             title
             slug
             content {
                 html
             }
-        }
-        pages(where: { slug: "services" }) {
-            title
-            description
         }
     }
 `

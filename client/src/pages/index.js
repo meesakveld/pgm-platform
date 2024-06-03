@@ -6,6 +6,7 @@ import Portfolio from './Portfolio'
 import Services from './Services'
 import Team from './Team'
 import Search from './Search'
+import ArticlePage from './ArticlePage'
 
 export {
     Blog,
@@ -15,5 +16,6 @@ export {
     Portfolio,
     Services,
     Team,
-    Search
+    Search,
+    ArticlePage
 }

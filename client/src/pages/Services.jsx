@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 
 import TopSection from '../components/TopSection'
 import GridLayout from '../components/GridLayout'
@@ -19,15 +20,20 @@ export default function Services() {
         setPage(data.pages[0])
     }, [data])
 
-    const bordercolor = () => { 
-        return Math.floor(Math.random() * 3) === 0 ? 'border-red' : Math.floor(Math.random() * 3) === 1 ? 'border-pink' : 'border-blue' 
-    }
-
     return (
 
         <main className="max-w-200 mx-auto">
 
-            <TopSection title={page.title} description={page.description} />
+            {page &&
+                <>
+                    <Helmet>
+                        <title>{`${page.title} | Graduaat Programmeren`}</title>
+                        <meta name="description" content={page.description} />
+                    </Helmet>
+
+                    <TopSection title={page.title} description={page.description} />
+                </>
+            }
 
             {loading && <p className='p-6'>Loading...</p>}
             {error && <p className='p-6'>Error: {error.message}</p>}

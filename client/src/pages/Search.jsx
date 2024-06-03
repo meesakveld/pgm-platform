@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useQuery } from '@apollo/client'
+import { Helmet } from 'react-helmet';
 
 import TopSection from '../components/TopSection'
 import ListLayout from '../components/ListLayout'
@@ -62,8 +63,8 @@ export default function Search() {
     }, [data, searchValue])
 
     useEffect(() => {
-        if (query === "" || !data || searchValue === "") 
-        setSearchResultsEmployees([])
+        if (query === "" || !data || searchValue === "")
+            setSearchResultsEmployees([])
         setSearchResultsPortfolio([])
         setSearchResultsBlog([])
         setSearchResultsServices([])
@@ -77,6 +78,10 @@ export default function Search() {
 
     return (
         <main className='max-w-200 mx-auto'>
+
+            <Helmet>
+                <title>{`Search | Graduaat Programmeren`}</title>
+            </Helmet>
 
             <TopSection title="Search" />
 

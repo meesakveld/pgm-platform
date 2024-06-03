@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import TopSection from '../components/TopSection'
 import FilterSort from '../components/FilterSort'
@@ -40,7 +41,16 @@ export default function Portfolio() {
 
         <main className="max-w-200 mx-auto">
 
-            {page && <TopSection title={page.title} description={page.description} />}
+            {page &&
+                <>
+                    <Helmet>
+                        <title>{`${page.title} | Graduaat Programmeren`}</title>
+                        <meta name="description" content={page.description} />
+                    </Helmet>
+
+                    <TopSection title={page.title} description={page.description} />
+                </>
+            }
 
             {courses &&
                 <FilterSort filter={filter} setFilter={setFilter} sort={sort} setSort={setSort} courses={courses} />

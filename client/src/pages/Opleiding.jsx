@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 
 import TopSection from '../components/TopSection'
 
@@ -27,8 +28,16 @@ export default function Opleiding() {
 
         <main className="max-w-200 mx-auto">
 
+
             {page &&
-                <TopSection title={page.title} description={page.description} />
+                <>
+                    <Helmet>
+                        <title>{`${page.title} | Graduaat Programmeren`}</title>
+                        <meta name="description" content={page.description} />
+                    </Helmet>
+
+                    <TopSection title={page.title} description={page.description} />
+                </>
             }
 
             {loading && <p className='p-6'>Loading...</p>}

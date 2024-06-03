@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 
 import TopSection from '../components/TopSection'
 import ListLayout from '../components/ListLayout'
@@ -33,6 +34,11 @@ export default function Blog() {
     return (
 
         <main className="max-w-200 mx-auto">
+
+            <Helmet>
+                <title>{`${page.title} | Graduaat Programmeren`}</title>
+                <meta name="description" content={page.description} />
+            </Helmet>
 
             <TopSection title={page.title} description={page.description} />
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 
 import TopSection from '../components/TopSection'
 
@@ -9,7 +10,7 @@ import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 import ListLayout from '../components/ListLayout'
 
 export default function Team() {
-    
+
     loadDevMessages(); loadErrorMessages();
 
     const [employees, setEmployees] = useState([])
@@ -33,7 +34,16 @@ export default function Team() {
 
         <main className="max-w-200 mx-auto">
 
-            <TopSection title={page.title} description={page.description} />
+            {page &&
+                <>
+                    <Helmet>
+                        <title>{`${page.title} | Graduaat Programmeren`}</title>
+                        <meta name="description" content={page.description} />
+                    </Helmet>
+
+                    <TopSection title={page.title} description={page.description} />
+                </>
+            }
 
             {loading && <p className='p-6'>Loading...</p>}
             {error && <p className='p-6'>Error: {error.message}</p>}

@@ -39,7 +39,7 @@ export default function Search() {
     })
 
     useEffect(() => {
-        if (query === "" || !data) return
+        if (query === "" || !data || searchValue === "") return
         const formattedEmployees = data.employees.map(employee => {
             return {
                 ...employee,
@@ -61,6 +61,14 @@ export default function Search() {
         setSearchResultsServices(data.services)
     }, [data, searchValue])
 
+    useEffect(() => {
+        if (query === "" || !data || searchValue === "") 
+        setSearchResultsEmployees([])
+        setSearchResultsPortfolio([])
+        setSearchResultsBlog([])
+        setSearchResultsServices([])
+    }, [])
+
     // —————————— Convert date ——————————
     const formatDate = (date) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -75,7 +83,7 @@ export default function Search() {
             <section className='p-6'>
 
                 <form className='relative' onSubmit={handleSearchSubmit}>
-                    <input onChange={handleSearch} className="w-full pr-11 rounded-full  p-4 focus-visible:outline-red text-[#243542]" type="text" placeholder="Search" />
+                    <input onChange={handleSearch} className="w-full pr-11 rounded-full  p-4 focus-visible:outline-red text-[#243542]" type="text" placeholder="Search" value={searchValue} />
                     <button className="absolute top-1/2 transform  -translate-x-1/2 -translate-y-1/2 left-auto right-0"><img src={searchIcon} alt="search" /></button>
                 </form>
 

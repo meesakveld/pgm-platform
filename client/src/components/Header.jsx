@@ -14,14 +14,6 @@ export default function Header() {
     const navigate = useNavigate();
 
     // —————————— Dark Mode ——————————
-    useEffect(() => {
-        setIsDarkMode(sessionStorage.getItem("isDarkMode") === 'true' ? true : false)
-    }, [])
-
-    useEffect(() => {
-        document.querySelector('html').toggleAttribute('dark-mode')
-    }, [isDarkMode])
-
     const handleThemeClick = () => {
         setIsDarkMode(!isDarkMode)
         sessionStorage.setItem("isDarkMode", !isDarkMode)

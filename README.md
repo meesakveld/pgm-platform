@@ -2,6 +2,8 @@
 
 This is a website for the Graduate Program in Programming, which includes a portfolio from various program tracks. The target audience includes prospective students, current students, alumni, industry professionals, and other interested parties.
 
+<a href="https://pgm-platform-pgm-meesakveld.onrender.com"><img src="https://img.shields.io/badge/Visit%20the%20site.-2769ab"></a>
+
 ### Required Functional Specifications:
 - Homepage
 - Education

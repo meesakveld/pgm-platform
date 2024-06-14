@@ -1,3 +1,5 @@
+![PGM Platform](.github/image.png)
+
 # PGM Platform
 
 This is a website for the Graduate Program in Programming, which includes a portfolio from various program tracks. The target audience includes prospective students, current students, alumni, industry professionals, and other interested parties.

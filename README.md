@@ -25,7 +25,7 @@ This is a website for the Graduate Program in Programming, which includes a port
 <br>
 
 ## Back-end
-- **GraphCMS as Backend as a Service (BAAS)**: Utilizing GraphCMS, a headless CMS that serves as a backend as a service, to manage and deliver content via a GraphQL API. This allows for flexible and efficient content management and delivery, supporting the needs of the front-end application.
+- **Hygraph Headless CMS as Backend as a Service (BAAS)**: Utilizing GraphCMS, a headless CMS that serves as a backend as a service, to manage and deliver content via a GraphQL API. This allows for flexible and efficient content management and delivery, supporting the needs of the front-end application.
 
 <br>
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Mees Akveld",
+  "homepage": "https://meesakveld.github.io/pgm-platform",
   "dependencies": {
     "@apollo/client": "^3.10.4",
     "@testing-library/jest-dom": "^5.17.0",
